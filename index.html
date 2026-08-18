@@ -1,0 +1,2533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Mariana Fantinatti | Endocrinologista — Norte Fluminense, RJ</title>
+<meta name="description" content="Avaliação completa em endocrinologia. Saúde hormonal, emagrecimento e qualidade de vida — investigando a causa real, não apenas os exames.">
+
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dramarifantinatti.com.br/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Dra. Mariana Fantinatti | Endocrinologista">
+<meta property="og:description" content="Cuido da sua saúde de forma integral. Emagrecimento saudável. Investigamos antes de tratar.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════════ */
+:root {
+  /* Paleta — Dra. Mari */
+  --verde:        #3B5E3A;   /* primária — seriedade + saúde */
+  --verde-lt:     #4A7349;   /* hover */
+  --verde-deep:   #2A4429;   /* fundo escuro */
+  --verde-muted:  #5A7259;   /* textos sobre escuro */
+  --offwhite:     #F6F3EF;   /* fundo principal */
+  --creme:        #EDE8E0;   /* fundo alternado */
+  --branco:       #FFFFFF;
+  --grafite:      #1A1A1A;   /* texto principal */
+  --meio:         #3D3D3D;   /* corpo */
+  --cinza:        #767676;   /* secundário */
+  --cinza-lt:     #C8C4BC;   /* bordas */
+  --accent:       #8C6E3F;   /* dourado-terra — destaque quente */
+  --accent-lt:    #B89360;
+
+  /* Tipografia */
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+
+  /* Espaçamento */
+  --section-gap: clamp(5rem, 9vw, 8rem);
+  --container:   1140px;
+  --radius:      4px;
+}
+
+/* ═══════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--sans);
+  color: var(--grafite);
+  background: var(--branco);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+button { font-family: var(--sans); cursor: pointer; border: none; background: none; }
+
+/* ═══════════════════════════════════════════════
+   UTILITÁRIOS
+═══════════════════════════════════════════════ */
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .75s cubic-bezier(.22,1,.36,1),
+              transform .75s cubic-bezier(.22,1,.36,1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+
+/* Linha decorativa antes de eyebrow */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 1.25rem;
+}
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1.5px;
+  background: var(--verde);
+  flex-shrink: 0;
+}
+.eyebrow--light { color: var(--accent-lt); }
+.eyebrow--light::before { background: var(--accent-lt); }
+
+/* Títulos de seção */
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  color: var(--grafite);
+  margin-bottom: 1rem;
+}
+.section-title em { font-style: italic; color: var(--verde); }
+.section-sub {
+  font-size: 1.05rem;
+  color: var(--cinza);
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+/* ═══════════════════════════════════════════════
+   BOTÕES
+═══════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-size: .88rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  border-radius: var(--radius);
+  padding: .85rem 1.85rem;
+  transition: all .3s cubic-bezier(.22,1,.36,1);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--verde);
+  color: var(--branco);
+  box-shadow: 0 2px 8px rgba(59,94,58,.18);
+}
+.btn-primary:hover {
+  background: var(--verde-lt);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(59,94,58,.28);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--verde);
+  border: 1.5px solid var(--verde);
+}
+.btn-outline:hover {
+  background: var(--verde);
+  color: var(--branco);
+  transform: translateY(-2px);
+}
+/* Variante clara para uso sobre fundo escuro (hero) */
+.btn-outline-light {
+  background: transparent;
+  color: var(--branco);
+  border: 1.5px solid rgba(255,255,255,.4);
+  font-size: .88rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  border-radius: var(--radius);
+  padding: .85rem 1.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  transition: all .3s cubic-bezier(.22,1,.36,1);
+  white-space: nowrap;
+}
+.btn-outline-light:hover {
+  border-color: rgba(255,255,255,.75);
+  background: rgba(255,255,255,.08);
+  transform: translateY(-2px);
+}
+.btn-outline-light.btn-lg {
+  padding: 1.05rem 2.4rem;
+  font-size: .95rem;
+}
+.btn-lg { padding: 1.05rem 2.4rem; font-size: .95rem; }
+
+.btn-white {
+  background: var(--branco);
+  color: var(--verde-deep);
+  font-weight: 700;
+}
+.btn-white:hover {
+  background: var(--creme);
+  transform: translateY(-2px);
+}
+.btn-ghost-white {
+  background: transparent;
+  color: var(--branco);
+  border: 1.5px solid rgba(255,255,255,.45);
+  padding: 1.05rem 2.4rem;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  border-radius: var(--radius);
+  transition: all .3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-ghost-white:hover {
+  border-color: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.1);
+}
+
+/* Ícone WhatsApp SVG embutido */
+.ico-wa {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   HEADER / NAV
+═══════════════════════════════════════════════ */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 900;
+  padding: 1.4rem 0;
+  transition: background .4s, box-shadow .4s, padding .4s, color .4s;
+  /* Hero é escuro — textos do header iniciam brancos */
+  --header-text: rgba(255,255,255,.85);
+  --header-text-hover: #fff;
+}
+/* Estado transparente: links e logo em branco */
+.site-header .logo { color: var(--branco); }
+.site-header .logo small { color: rgba(255,255,255,.5); }
+.site-header .nav-links a { color: rgba(255,255,255,.75); }
+.site-header .nav-links a:hover { color: var(--branco); }
+.site-header .btn-header {
+  background: rgba(255,255,255,.15);
+  color: var(--branco);
+  border: 1px solid rgba(255,255,255,.3);
+  box-shadow: none;
+}
+.site-header .btn-header:hover {
+  background: rgba(255,255,255,.25);
+  transform: translateY(-1px);
+}
+.site-header .nav-toggle span { background: var(--branco); }
+
+/* Estado sólido (após rolar): fundo claro, textos escuros */
+.site-header.solid {
+  background: rgba(246,243,239,.96);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 rgba(0,0,0,.07);
+  padding: .95rem 0;
+}
+.site-header.solid .logo { color: var(--verde-deep); }
+.site-header.solid .logo small { color: var(--cinza); }
+.site-header.solid .nav-links a { color: var(--meio); }
+.site-header.solid .nav-links a:hover { color: var(--verde); }
+.site-header.solid .btn-header {
+  background: var(--verde);
+  color: var(--branco);
+  border: none;
+  box-shadow: 0 2px 8px rgba(59,94,58,.18);
+}
+.site-header.solid .btn-header:hover {
+  background: var(--verde-lt);
+  box-shadow: 0 10px 28px rgba(59,94,58,.28);
+}
+.site-header.solid .nav-toggle span { background: var(--grafite); }
+
+/* Mobile: header estático, sem barra fixa, sem botão CTA */
+@media (max-width: 820px) {
+  .site-header {
+    position: static;
+    background: var(--verde-deep);
+    padding: 1rem 0;
+    box-shadow: none;
+  }
+  .site-header.solid {
+    background: var(--verde-deep);
+    box-shadow: none;
+    padding: 1rem 0;
+  }
+  .btn-header { display: none !important; }
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+}
+.logo {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  letter-spacing: .01em;
+  color: var(--verde-deep);
+  line-height: 1.1;
+}
+.logo small {
+  display: block;
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--cinza);
+  margin-top: .1rem;
+}
+.nav-links {
+  display: flex;
+  gap: 2.25rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--meio);
+  transition: color .3s;
+}
+.nav-links a:hover { color: var(--verde); }
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: .4rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--grafite);
+  border-radius: 2px;
+  transition: all .3s;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 100svh;
+  background: var(--verde-deep);
+  z-index: 850;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  transform: translateX(100%);
+  transition: transform .4s cubic-bezier(.22,1,.36,1);
+}
+.mobile-nav.open {
+  display: flex;
+  transform: translateX(0);
+}
+.mobile-nav a {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--branco);
+  text-align: center;
+  opacity: .85;
+  transition: opacity .3s;
+}
+.mobile-nav a:hover { opacity: 1; }
+.mobile-nav .btn { margin-top: 1rem; }
+
+@media (max-width: 820px) {
+  .nav-links { display: none; }
+  .btn-header { display: none; }
+  .nav-toggle { display: flex; }
+}
+
+/* ═══════════════════════════════════════════════
+   HERO — Editorial full-bleed escuro
+═══════════════════════════════════════════════ */
+.hero {
+  min-height: 100svh;
+  background: var(--verde-deep);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  padding-top: 80px; /* compensa o header fixo no desktop */
+}
+
+/* Textura de grain sutil no fundo */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+/* Acento luminoso orgânico à direita */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -10%; right: -5%;
+  width: 60%; height: 120%;
+  background: radial-gradient(ellipse 60% 80% at 70% 50%,
+    rgba(140,110,63,.18) 0%,
+    rgba(59,94,58,.08) 45%,
+    transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem clamp(1.5rem, 4vw, 3rem) 6rem clamp(2rem, 6vw, 6rem);
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent-lt);
+  margin-bottom: 1.5rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent-lt);
+  flex-shrink: 0;
+}
+.hero-h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 5.8vw, 5.6rem);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -.025em;
+  color: var(--branco);
+  margin-bottom: 1.75rem;
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--accent-lt);
+}
+.hero-sub {
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  color: rgba(255,255,255,.62);
+  line-height: 1.82;
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+}
+.hero-actions {
+  display: flex;
+  gap: .85rem;
+  flex-wrap: wrap;
+}
+
+/* HERO VISUAL — cartão flutuante editorial */
+.hero-visual {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem clamp(2rem, 5vw, 5rem) 5rem clamp(1rem, 3vw, 2rem);
+}
+
+/* Cartão da foto: formato retrato arredondado, borda dourada fina, sombra profunda */
+.hero-card {
+  position: relative;
+  width: clamp(240px, 38vw, 460px);
+  aspect-ratio: 3/4;
+  border-radius: 20px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+/* Borda dourada decorativa (anel externo) */
+.hero-card::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 28px;
+  border: 1px solid rgba(184,147,96,.35);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Acento de brilho no canto superior esquerdo */
+.hero-card::after {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px;
+  width: 90px; height: 90px;
+  border-radius: 28px 0 0 0;
+  border-top: 2px solid var(--accent-lt);
+  border-left: 2px solid var(--accent-lt);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,.55),
+    0 12px 30px rgba(0,0,0,.35),
+    inset 0 0 0 1px rgba(255,255,255,.06);
+  position: relative;
+  z-index: 1;
+}
+
+/*
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │  IMAGEM HERO — COMO INSERIR                                         │
+  │                                                                     │
+  │  Quando tiver o base64 da foto da Dra. Mari:                        │
+  │  1. Substitua o .hero-img-placeholder pelo <img> abaixo:            │
+  │                                                                     │
+  │  <img id="hero-img"                                                 │
+  │       class="hero-img"                                              │
+  │       src="data:image/jpeg;base64,SEU_BASE64_AQUI"                  │
+  │       alt="Dra. Mariana Fantinatti, endocrinologista"               │
+  │       loading="eager"                                               │
+  │       decoding="async">                                             │
+  │                                                                     │
+  │  2. Remove o .hero-img-placeholder inteiramente                     │
+  └─────────────────────────────────────────────────────────────────────┘
+*/
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Placeholder visual elegante enquanto não há imagem */
+.hero-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #3A5039 0%, #2A3D28 60%, #1E2E1C 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: rgba(255,255,255,.3);
+}
+.hero-img-placeholder svg { opacity: .4; }
+.hero-img-placeholder span {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .4;
+}
+
+/* Chip de credencial dentro do cartão — canto inferior */
+.hero-card-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  background: rgba(20,34,20,.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(184,147,96,.3);
+  border-radius: 50px;
+  padding: .55rem 1.15rem;
+  white-space: nowrap;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent-lt);
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+.hero-card-badge::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent-lt);
+  opacity: .7;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 0; /* header não é fixo no mobile */
+  }
+  .hero-copy {
+    padding: 3rem 1.5rem 2rem;
+    order: 1;
+  }
+  .hero-visual {
+    order: 2;
+    padding: 0 1.5rem 3.5rem;
+    justify-content: center;
+  }
+  .hero-card {
+    width: min(260px, 68vw);
+  }
+  /* Botão outline vira branco no fundo escuro */
+  .hero-actions .btn-outline {
+    border-color: rgba(255,255,255,.35);
+    color: var(--branco);
+  }
+  .hero-actions .btn-outline:hover {
+    background: rgba(255,255,255,.1);
+    color: var(--branco);
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   STRIP CREDENCIAIS — abaixo do hero
+═══════════════════════════════════════════════ */
+.cred-strip {
+  background: var(--verde-deep);
+  color: var(--branco);
+  padding: 1.4rem 0;
+  overflow: hidden;
+}
+.cred-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  flex-wrap: wrap;
+}
+.cred-strip-item {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .8rem;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.72);
+  white-space: nowrap;
+}
+.cred-strip-item svg {
+  opacity: .6;
+  flex-shrink: 0;
+}
+.cred-strip-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255,255,255,.15);
+}
+@media (max-width: 600px) {
+  .cred-strip-inner { gap: 1rem; }
+  .cred-strip-divider { display: none; }
+}
+
+/* ═══════════════════════════════════════════════
+   SEÇÃO 2 — O PROBLEMA
+═══════════════════════════════════════════════ */
+.problema {
+  padding: var(--section-gap) 0;
+  background: var(--branco);
+}
+.problema-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .problema-layout { grid-template-columns: 1fr; }
+}
+.problema-lead {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  line-height: 1.25;
+  letter-spacing: -.01em;
+  color: var(--grafite);
+  margin-bottom: 1.5rem;
+}
+.problema-lead em {
+  font-style: italic;
+  color: var(--verde);
+}
+.problema-body {
+  font-size: 1.02rem;
+  color: var(--meio);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+/* Grid de sintomas */
+.sintomas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .65rem;
+}
+@media (max-width: 480px) {
+  .sintomas-grid { grid-template-columns: 1fr; }
+}
+.sintoma-item {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  padding: .8rem 1rem;
+  background: var(--offwhite);
+  border-radius: var(--radius);
+  border-left: 2px solid var(--cinza-lt);
+  transition: border-color .3s, background .3s;
+}
+.sintoma-item:hover {
+  border-left-color: var(--verde);
+  background: #EEF2EE;
+}
+.sintoma-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--verde-muted);
+  flex-shrink: 0;
+  margin-top: .42rem;
+}
+.sintoma-text {
+  font-size: .9rem;
+  color: var(--meio);
+  line-height: 1.5;
+}
+/* Bloco de crítica ao mercado */
+.critica-bloco {
+  margin-top: 2rem;
+  padding: 1.75rem 2rem;
+  background: var(--grafite);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+.critica-bloco::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+}
+.critica-text {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.65;
+  color: rgba(255,255,255,.85);
+}
+.critica-text em {
+  font-style: normal;
+  color: var(--accent-lt);
+  font-weight: 400;
+}
+.critica-source {
+  margin-top: .85rem;
+  font-size: .76rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+}
+
+/* ═══════════════════════════════════════════════
+   SEÇÃO 3 — MANIFESTO / ABORDAGEM
+═══════════════════════════════════════════════ */
+.abordagem {
+  padding: var(--section-gap) 0;
+  background: var(--verde-deep);
+  position: relative;
+  overflow: hidden;
+}
+.abordagem::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(255,255,255,.04) 0%, transparent 65%);
+  pointer-events: none;
+}
+.abordagem-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+@media (max-width: 820px) {
+  .abordagem-inner { grid-template-columns: 1fr; }
+}
+.abordagem-quote {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -.015em;
+  color: var(--branco);
+}
+.abordagem-quote em {
+  font-style: italic;
+  color: var(--accent-lt);
+}
+.abordagem-divider {
+  width: 48px;
+  height: 1px;
+  background: rgba(255,255,255,.25);
+  margin: 2rem 0;
+}
+.abordagem-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.85;
+}
+/* Cards de pilares */
+.pilares-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: rgba(255,255,255,.06);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.pilar-item {
+  background: rgba(255,255,255,.04);
+  padding: 1.6rem 1.85rem;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 1rem;
+  align-items: start;
+  transition: background .3s;
+}
+.pilar-item:hover { background: rgba(255,255,255,.08); }
+.pilar-num {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--accent);
+  line-height: 1;
+  padding-top: .1rem;
+}
+.pilar-title {
+  font-size: .88rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.85);
+  margin-bottom: .35rem;
+}
+.pilar-text {
+  font-size: .92rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.65;
+}
+
+/* ═══════════════════════════════════════════════
+   SEÇÃO 4 — RESULTADOS / BIG IDEA
+═══════════════════════════════════════════════ */
+.resultados {
+  padding: var(--section-gap) 0;
+  background: var(--offwhite);
+}
+.resultados-header {
+  text-align: center;
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+/* Lista de transformações */
+.transformacoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: var(--creme);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+@media (max-width: 768px) {
+  .transformacoes { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .transformacoes { grid-template-columns: 1fr; }
+}
+.transformacao-item {
+  background: var(--branco);
+  padding: 2rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: background .3s;
+}
+.transformacao-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--verde);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s cubic-bezier(.22,1,.36,1);
+}
+.transformacao-item:hover { background: #F5FAF5; }
+.transformacao-item:hover::after { transform: scaleX(1); }
+.transf-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #EEF4EE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--verde);
+  font-size: .9rem;
+  flex-shrink: 0;
+}
+.transf-title {
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--grafite);
+  margin-bottom: .35rem;
+}
+.transf-text {
+  font-size: .88rem;
+  color: var(--cinza);
+  line-height: 1.65;
+}
+/* Big Idea — frase de destaque */
+.big-idea {
+  text-align: center;
+  padding: 3.5rem clamp(1.5rem, 5vw, 3rem);
+  background: var(--verde);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+.big-idea::before {
+  content: '"';
+  position: absolute;
+  top: -1rem;
+  left: clamp(1rem, 4vw, 2.5rem);
+  font-family: var(--serif);
+  font-size: 12rem;
+  line-height: 1;
+  color: rgba(255,255,255,.06);
+  pointer-events: none;
+}
+.big-idea-text {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -.01em;
+  color: var(--branco);
+  max-width: 780px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+.big-idea-text em {
+  font-style: italic;
+  color: rgba(255,255,255,.7);
+}
+.big-idea-source {
+  margin-top: 1.25rem;
+  font-size: .76rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  position: relative;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════
+   SEÇÃO 5 — PROVA SOCIAL
+═══════════════════════════════════════════════ */
+.depoimentos {
+  padding: var(--section-gap) 0;
+  background: var(--branco);
+}
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+@media (max-width: 900px) {
+  .depoimentos-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 580px) {
+  .depoimentos-grid { grid-template-columns: 1fr; }
+}
+.dep-card {
+  background: var(--offwhite);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s;
+}
+.dep-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 44px rgba(59,94,58,.1);
+}
+.dep-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--verde), var(--accent));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.dep-card:hover::before { opacity: 1; }
+.dep-quote-mark {
+  font-family: var(--serif);
+  font-size: 3rem;
+  line-height: .5;
+  color: var(--cinza-lt);
+  margin-bottom: 1rem;
+  display: block;
+}
+.dep-text {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--meio);
+  margin-bottom: 1.5rem;
+}
+.dep-divider {
+  width: 28px;
+  height: 1px;
+  background: var(--cinza-lt);
+  margin-bottom: 1rem;
+}
+.dep-name {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--grafite);
+  margin-bottom: .15rem;
+}
+.dep-role {
+  font-size: .78rem;
+  color: var(--cinza);
+  letter-spacing: .02em;
+}
+/* Card de aviso — aguarda depoimentos */
+.dep-aviso {
+  grid-column: 1 / -1;
+  background: var(--creme);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px dashed var(--cinza-lt);
+  margin-top: .5rem;
+}
+.dep-aviso-text {
+  font-size: .85rem;
+  color: var(--cinza);
+  line-height: 1.6;
+}
+.dep-aviso-text strong { color: var(--meio); }
+
+/* ═══════════════════════════════════════════════
+   SEÇÃO 6 — SOBRE / AUTORIDADE
+═══════════════════════════════════════════════ */
+.sobre {
+  padding: var(--section-gap) 0;
+  background: var(--creme);
+}
+.sobre-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .sobre-layout { grid-template-columns: 1fr; }
+}
+/* Slot de imagem — autoridade */
+.sobre-img-wrap {
+  position: relative;
+}
+.sobre-img-wrap::before {
+  content: '';
+  position: absolute;
+  top: 2rem; left: -1.75rem;
+  right: 1.75rem; bottom: -2rem;
+  background: var(--verde-deep);
+  border-radius: var(--radius);
+  z-index: 0;
+  opacity: .12;
+}
+/*
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │  IMAGEM SOBRE — COMO INSERIR                                        │
+  │                                                                     │
+  │  Quando tiver o base64 da foto editorial da Dra. Mari:              │
+  │  1. Substitua o src do <img id="sobre-img"> por:                    │
+  │     src="data:image/jpeg;base64,SEU_BASE64_AQUI"                    │
+  │  2. Remova o .sobre-img-placeholder e deixe somente o <img>         │
+  └─────────────────────────────────────────────────────────────────────┘
+*/
+.sobre-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgba(0,0,0,.13);
+}
+.sobre-img-placeholder {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: linear-gradient(140deg, #D9D4CA 0%, #C4BFB5 100%);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  color: var(--cinza);
+  box-shadow: 0 24px 60px rgba(0,0,0,.1);
+}
+.sobre-img-placeholder svg { opacity: .3; }
+.sobre-img-placeholder span {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .45;
+}
+
+.sobre-nome {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  color: var(--grafite);
+  margin-bottom: .25rem;
+}
+.sobre-titulo {
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: 1.75rem;
+}
+.sobre-body {
+  font-size: 1.02rem;
+  color: var(--meio);
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+/*
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │  TEXTO EM PRIMEIRA PESSOA — AGUARDA FORNECIMENTO DA MÉDICA          │
+  │                                                                     │
+  │  Substituir o conteúdo do parágrafo .sobre-body-placeholder         │
+  │  pelo texto real fornecido pela Dra. Mariana.                       │
+  └─────────────────────────────────────────────────────────────────────┘
+*/
+.sobre-body-placeholder {
+  font-size: 1.02rem;
+  color: var(--cinza);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--branco);
+  border-radius: var(--radius);
+  border: 1px dashed var(--cinza-lt);
+  font-style: italic;
+}
+.cred-lista {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  margin-bottom: 2rem;
+}
+.cred-row {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  font-size: .95rem;
+  color: var(--grafite);
+}
+.cred-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--verde);
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: .1rem;
+  font-size: .62rem;
+  font-weight: 700;
+}
+.sobre-quote {
+  padding: 1.4rem 1.75rem;
+  background: var(--branco);
+  border-left: 3px solid var(--verde);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-top: .5rem;
+}
+.sobre-quote-text {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--verde-deep);
+  line-height: 1.6;
+}
+.sobre-quote-source {
+  margin-top: .6rem;
+  font-size: .75rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--cinza);
+}
+/* Strip de números */
+.sobre-strip {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--cinza-lt);
+}
+.strip-num {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  color: var(--verde);
+  line-height: 1;
+}
+.strip-label {
+  display: block;
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--cinza);
+  margin-top: .2rem;
+}
+
+/* ═══════════════════════════════════════════════
+   SEÇÃO 7 — COMO FUNCIONA
+═══════════════════════════════════════════════ */
+.processo {
+  padding: var(--section-gap) 0;
+  background: var(--branco);
+}
+.processo-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .processo-layout { grid-template-columns: 1fr; }
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 2rem;
+}
+.step-row {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1.25rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(0,0,0,.07);
+  transition: all .3s;
+}
+.step-row:last-child { border-bottom: none; }
+.step-row:hover .step-n { color: var(--verde); }
+.step-n {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  color: var(--creme);
+  line-height: 1;
+  transition: color .4s;
+  /* garante que a cor transita de creme → verde ao hover */
+  -webkit-text-stroke: 1px var(--cinza-lt);
+}
+.step-row:hover .step-n {
+  -webkit-text-stroke: 0px transparent;
+}
+.step-title {
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--grafite);
+  margin-bottom: .4rem;
+}
+.step-body {
+  font-size: .95rem;
+  color: var(--cinza);
+  line-height: 1.75;
+}
+/* Card de localização */
+.local-card {
+  background: var(--offwhite);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-top: 2.5rem;
+  border: 1px solid var(--creme);
+}
+.local-title {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: .75rem;
+}
+.local-nome {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--grafite);
+  margin-bottom: .25rem;
+}
+.local-end {
+  font-size: .9rem;
+  color: var(--cinza);
+  line-height: 1.65;
+  /* Substituir quando endereço for confirmado */
+}
+.local-placeholder {
+  font-size: .85rem;
+  color: var(--cinza);
+  font-style: italic;
+  border: 1px dashed var(--cinza-lt);
+  padding: .75rem 1rem;
+  border-radius: var(--radius);
+  margin-top: .5rem;
+  background: var(--branco);
+}
+/* Painel de CTA no processo */
+.processo-cta-box {
+  background: var(--verde-deep);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  color: var(--branco);
+  position: sticky;
+  top: 7rem;
+}
+.processo-cta-box .eyebrow { color: var(--accent-lt); }
+.processo-cta-box .eyebrow::before { background: var(--accent-lt); }
+.processo-cta-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--branco);
+  margin-bottom: .75rem;
+}
+.processo-cta-sub {
+  font-size: .95rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+}
+.processo-cta-micro {
+  margin-top: 1rem;
+  font-size: .76rem;
+  color: rgba(255,255,255,.4);
+  letter-spacing: .04em;
+  text-align: center;
+}
+@media (max-width: 820px) {
+  .processo-cta-box { position: static; }
+}
+
+/* ═══════════════════════════════════════════════
+   SEÇÃO 8 — FAQ
+═══════════════════════════════════════════════ */
+.faq {
+  padding: var(--section-gap) 0;
+  background: var(--offwhite);
+}
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .faq-layout { grid-template-columns: 1fr; }
+}
+.faq-intro-sticky {
+  position: sticky;
+  top: 7rem;
+}
+@media (max-width: 820px) {
+  .faq-intro-sticky { position: static; }
+}
+.faq-sub-text {
+  font-size: .95rem;
+  color: var(--cinza);
+  line-height: 1.8;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.faq-cta-link {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--verde);
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  transition: gap .3s;
+}
+.faq-cta-link:hover { gap: .75rem; }
+
+.accordion { border-top: 1px solid rgba(0,0,0,.07); }
+.acc-item { border-bottom: 1px solid rgba(0,0,0,.07); }
+.acc-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.35rem 0;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--grafite);
+  text-align: left;
+  gap: 1.25rem;
+  transition: color .3s;
+}
+.acc-btn:hover { color: var(--verde); }
+.acc-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cinza-lt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--cinza);
+  transition: all .3s;
+}
+.acc-item.open .acc-btn { color: var(--verde); }
+.acc-item.open .acc-icon {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: var(--branco);
+  transform: rotate(45deg);
+}
+.acc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .42s cubic-bezier(.22,1,.36,1);
+}
+.acc-body-inner {
+  padding: .15rem 0 1.35rem;
+  font-size: .97rem;
+  color: var(--cinza);
+  line-height: 1.85;
+}
+.acc-body-inner strong { color: var(--meio); }
+
+/* ═══════════════════════════════════════════════
+   SEÇÃO 9 — CTA FINAL
+═══════════════════════════════════════════════ */
+.cta-final {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: var(--verde-deep);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.cta-final::before {
+  content: '';
+  position: absolute;
+  top: -40%; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(255,255,255,.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+/* Linhas de grade decorativas */
+.cta-final::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.cta-final-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin-inline: auto;
+}
+.cta-final-title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.015em;
+  color: var(--branco);
+  margin-bottom: 1.25rem;
+}
+.cta-final-title em {
+  font-style: italic;
+  color: rgba(255,255,255,.55);
+}
+.cta-final-body {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.65);
+  line-height: 1.85;
+  max-width: 520px;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+}
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta-micro {
+  margin-top: 1.5rem;
+  font-size: .78rem;
+  color: rgba(255,255,255,.35);
+  letter-spacing: .04em;
+}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+.footer {
+  padding: 2.5rem 0;
+  background: #111;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: rgba(255,255,255,.55);
+}
+.footer-logo small {
+  display: block;
+  font-family: var(--sans);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.25);
+  margin-top: .1rem;
+}
+.footer-crm {
+  font-size: .76rem;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.28);
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-links a {
+  font-size: .78rem;
+  color: rgba(255,255,255,.35);
+  transition: color .3s;
+  letter-spacing: .03em;
+}
+.footer-links a:hover { color: rgba(255,255,255,.7); }
+@media (max-width: 640px) {
+  .footer-inner { justify-content: center; text-align: center; }
+  .footer-links { justify-content: center; }
+}
+
+/* ═══════════════════════════════════════════════
+   WHATSAPP FLUTUANTE
+═══════════════════════════════════════════════ */
+.wa-float {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 800;
+  opacity: 0;
+  transform: scale(.85);
+  transition: opacity .5s, transform .5s cubic-bezier(.22,1,.36,1);
+  pointer-events: none;
+}
+.wa-float.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.wa-float a {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  background: #25D366;
+  color: var(--branco);
+  padding: .85rem 1.35rem;
+  border-radius: 50px;
+  font-size: .85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(37,211,102,.38);
+  transition: all .3s;
+  white-space: nowrap;
+}
+.wa-float a:hover {
+  background: #1fb957;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37,211,102,.45);
+}
+.wa-float svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--branco);
+  flex-shrink: 0;
+}
+@media (max-width: 480px) {
+  .wa-float a span { display: none; }
+  .wa-float a { padding: 1rem; border-radius: 50%; }
+}
+
+/* ═══════════════════════════════════════════════
+   REDUCED MOTION
+═══════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .fade-up { transition: none !important; opacity: 1 !important; transform: none !important; }
+  .wa-float { opacity: 1; pointer-events: auto; transform: none; }
+}
+
+/* ═══════════════════════════════════════════════
+   PRINT
+═══════════════════════════════════════════════ */
+@media print {
+  .site-header, .wa-float, .mobile-nav { display: none; }
+  body { font-size: 12pt; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ MOBILE NAV ═══════════════════════════════════════════ -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile" aria-hidden="true">
+  <a href="#sobre" onclick="closeMobileNav()">Sobre</a>
+  <a href="#abordagem" onclick="closeMobileNav()">Abordagem</a>
+  <a href="#processo" onclick="closeMobileNav()">Como funciona</a>
+  <a href="#faq" onclick="closeMobileNav()">Dúvidas</a>
+  <a href="https://wa.me/5522998505103?text=Olá%2C%20Dra.%20Mari!%20Gostaria%20de%20agendar%20uma%20consulta."
+     target="_blank" rel="noopener" class="btn btn-white btn-lg" onclick="closeMobileNav()">
+    Agendar consulta
+  </a>
+</nav>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════ -->
+<header class="site-header" id="header" role="banner">
+  <div class="header-inner">
+    <div class="logo" aria-label="Dra. Mariana Fantinatti, Endocrinologista">
+      Dra. Mari Fantinatti
+      <small>Endocrinologista</small>
+    </div>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#abordagem">Abordagem</a></li>
+      <li><a href="#processo">Como funciona</a></li>
+      <li><a href="#faq">Dúvidas</a></li>
+    </ul>
+
+    <a href="https://wa.me/5522998505103?text=Olá%2C%20Dra.%20Mari!%20Gostaria%20de%20agendar%20uma%20consulta."
+       class="btn btn-primary btn-header"
+       target="_blank" rel="noopener"
+       aria-label="Agendar consulta via WhatsApp">
+      <svg class="ico-wa" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.117 1.533 5.845L.057 23.486a.5.5 0 0 0 .638.604l5.772-1.513A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.942 9.942 0 0 1-5.071-1.384l-.361-.214-3.742.981.999-3.648-.235-.374A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+      Agendar consulta
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══════════════════════════════════════════════════ -->
+<main>
+<section class="hero" aria-labelledby="hero-title">
+
+  <!-- Coluna esquerda: copy -->
+  <div class="hero-copy">
+    <div class="hero-eyebrow reveal">Endocrinologista · CRM/RJ 107530-6</div>
+
+    <h1 class="hero-h1 reveal reveal-delay-1" id="hero-title">
+      Você não precisa<br>
+      aprender a<br>
+      <em>conviver</em> com isso.
+    </h1>
+
+    <p class="hero-sub reveal reveal-delay-2">
+      Cuido da sua saúde de forma integral — metabolismo, hormônios e tudo o que impacta a forma como você se sente todos os dias.
+    </p>
+
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="https://wa.me/5522998505103?text=Olá%2C%20Dra.%20Mari!%20Gostaria%20de%20agendar%20uma%20consulta."
+         class="btn btn-primary btn-lg"
+         target="_blank" rel="noopener">
+        <svg class="ico-wa" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.117 1.533 5.845L.057 23.486a.5.5 0 0 0 .638.604l5.772-1.513A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.942 9.942 0 0 1-5.071-1.384l-.361-.214-3.742.981.999-3.648-.235-.374A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+        Agendar minha consulta
+      </a>
+      <a href="#processo" class="btn-outline-light btn-lg">Entender como funciona</a>
+    </div>
+  </div>
+
+  <!-- Coluna direita: cartão flutuante com foto -->
+  <div class="hero-visual reveal reveal-delay-2" aria-hidden="true">
+    <div class="hero-card">
+      <div class="hero-card-inner">
+        <!--
+          INSTRUÇÃO PARA INCLUSÃO DA IMAGEM HERO:
+          Substitua o .hero-img-placeholder abaixo por:
+
+          <img id="hero-img"
+               class="hero-img"
+               src="data:image/jpeg;base64,SEU_BASE64_AQUI"
+               alt="Dra. Mariana Fantinatti, endocrinologista"
+               loading="eager"
+               decoding="async">
+
+          Remova o bloco .hero-img-placeholder inteiramente.
+        -->
+        <div class="hero-img-placeholder">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/>
+          </svg>
+          <span>Foto da Dra. Mariana</span>
+        </div>
+      </div>
+      <!-- Badge de credencial no rodapé do cartão -->
+      <div class="hero-card-badge">
+        Endocrinologista · RQE 50814
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══ STRIP CREDENCIAIS ══════════════════════════════════════ -->
+<div class="cred-strip" role="complementary" aria-label="Credenciais">
+  <div class="cred-strip-inner">
+    <div class="cred-strip-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      CRM/RJ: 107530-6
+    </div>
+    <div class="cred-strip-divider"></div>
+    <div class="cred-strip-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      RQE: 50814 — Especialidade reconhecida pelo CFM
+    </div>
+    <div class="cred-strip-divider"></div>
+    <div class="cred-strip-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Sevvi Clínica Integrada · Norte Fluminense, RJ
+    </div>
+  </div>
+</div>
+
+<!-- ═══ O PROBLEMA ════════════════════════════════════════════ -->
+<section class="problema" aria-labelledby="problema-title">
+  <div class="container">
+    <div class="problema-layout">
+      <!-- Coluna esquerda -->
+      <div>
+        <div class="eyebrow reveal">Você não está exagerando</div>
+        <h2 class="problema-lead reveal reveal-delay-1" id="problema-title">
+          Você fez tudo certo.<br>
+          E mesmo assim <em>não funcionou.</em>
+        </h2>
+        <p class="problema-body reveal reveal-delay-2">
+          Dieta. Academia. Nutricionista. Suplemento. Você tentou.<br><br>
+          E talvez tenha ouvido que seus exames "estavam normais" — mas continuou se sentindo exausta, inchada, sem humor, sem disposição, sem se reconhecer.
+        </p>
+        <p class="problema-body reveal reveal-delay-3">
+          Isso não é falta de força de vontade.<br>
+          <strong>Isso pode ter uma causa que ainda não foi investigada.</strong>
+        </p>
+
+        <div class="critica-bloco reveal reveal-delay-4">
+          <p class="critica-text">
+            O mercado do emagrecimento lucra com uma coisa: <em>soluções rápidas para problemas complexos.</em><br>
+            Shake. Detox. Dieta da moda. Protocolo genérico.<br>
+            Quando a causa real não é tratada, o resultado não vem — ou vem e não fica.
+          </p>
+          <p class="critica-source">— Dra. Mariana Fantinatti</p>
+        </div>
+      </div>
+
+      <!-- Coluna direita: sintomas -->
+      <div>
+        <p class="section-sub reveal" style="margin-bottom:1.5rem; font-size:.88rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--grafite);">
+          Você se identifica com algum desses sintomas?
+        </p>
+        <div class="sintomas-grid">
+          <div class="sintoma-item reveal reveal-delay-1">
+            <div class="sintoma-dot"></div>
+            <span class="sintoma-text">Cansaço que não passa mesmo dormindo</span>
+          </div>
+          <div class="sintoma-item reveal reveal-delay-1">
+            <div class="sintoma-dot"></div>
+            <span class="sintoma-text">Dificuldade de emagrecer mesmo com dieta e exercício</span>
+          </div>
+          <div class="sintoma-item reveal reveal-delay-2">
+            <div class="sintoma-dot"></div>
+            <span class="sintoma-text">Humor instável sem motivo claro</span>
+          </div>
+          <div class="sintoma-item reveal reveal-delay-2">
+            <div class="sintoma-dot"></div>
+            <span class="sintoma-text">Insônia ou sono que não repara</span>
+          </div>
+          <div class="sintoma-item reveal reveal-delay-3">
+            <div class="sintoma-dot"></div>
+            <span class="sintoma-text">Névoa mental e dificuldade de concentração</span>
+          </div>
+          <div class="sintoma-item reveal reveal-delay-3">
+            <div class="sintoma-dot"></div>
+            <span class="sintoma-text">Queda de libido</span>
+          </div>
+          <div class="sintoma-item reveal reveal-delay-4">
+            <div class="sintoma-dot"></div>
+            <span class="sintoma-text">Fogachos e suores noturnos</span>
+          </div>
+          <div class="sintoma-item reveal reveal-delay-4">
+            <div class="sintoma-dot"></div>
+            <span class="sintoma-text">Gordura abdominal que resiste a tudo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABORDAGEM ════════════════════════════════════════════ -->
+<section class="abordagem" id="abordagem" aria-labelledby="abordagem-title">
+  <div class="container">
+    <div class="abordagem-inner">
+      <!-- Coluna esquerda: quote + texto -->
+      <div>
+        <div class="eyebrow eyebrow--light reveal">A abordagem</div>
+        <h2 class="abordagem-quote reveal reveal-delay-1" id="abordagem-title">
+          Investigar antes<br>
+          de tratar.<br>
+          <em>Sem protocolo genérico.</em>
+        </h2>
+        <div class="abordagem-divider reveal reveal-delay-2"></div>
+        <p class="abordagem-sub reveal reveal-delay-2">
+          Na endocrinologia, não tratamos apenas um exame. Tratamos a pessoa, o metabolismo e o contexto em que ela vive.<br><br>
+          Antes de qualquer prescrição, fazemos uma avaliação completa: histórico de saúde, sintomas, estilo de vida, exames e tudo o que influencia a forma como seu corpo funciona.
+        </p>
+      </div>
+
+      <!-- Coluna direita: pilares -->
+      <div class="pilares-grid reveal reveal-delay-1">
+        <div class="pilar-item">
+          <span class="pilar-num">1</span>
+          <div>
+            <div class="pilar-title">Investigação completa</div>
+            <div class="pilar-text">Antes de qualquer tratamento, é preciso entender a causa real dos sintomas — não apenas olhar para o exame.</div>
+          </div>
+        </div>
+        <div class="pilar-item">
+          <span class="pilar-num">2</span>
+          <div>
+            <div class="pilar-title">Abordagem integral</div>
+            <div class="pilar-text">Hormônios conversam com cérebro, humor, inflamação, cognição e energia. O tratamento respeita esse contexto.</div>
+          </div>
+        </div>
+        <div class="pilar-item">
+          <span class="pilar-num">3</span>
+          <div>
+            <div class="pilar-title">Sem protocolo pronto</div>
+            <div class="pilar-text">Cada paciente tem uma história. O plano de cuidado é construído a partir da sua realidade, não de um modelo genérico.</div>
+          </div>
+        </div>
+        <div class="pilar-item">
+          <span class="pilar-num">4</span>
+          <div>
+            <div class="pilar-title">Estrutura integrada</div>
+            <div class="pilar-text">Atendimento na Sevvi Clínica Integrada, com suporte multidisciplinar para um cuidado mais completo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESULTADOS ════════════════════════════════════════════ -->
+<section class="resultados" aria-labelledby="resultados-title">
+  <div class="container">
+    <div class="resultados-header">
+      <div class="eyebrow reveal" style="justify-content:center">O que pode mudar</div>
+      <h2 class="section-title reveal reveal-delay-1" id="resultados-title" style="text-align:center;margin-inline:auto">
+        Além da <em>balança.</em>
+      </h2>
+      <p class="section-sub reveal reveal-delay-2" style="text-align:center;margin-inline:auto;max-width:560px">
+        Muitas pacientes chegam querendo emagrecer. Mas quando o tratamento é feito com profundidade, o que muda vai muito além do que a balança mostra.
+      </p>
+    </div>
+
+    <div class="transformacoes">
+      <div class="transformacao-item reveal">
+        <div class="transf-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div class="transf-title">O sono repara de verdade</div>
+        <div class="transf-text">Acordar descansada deixa de ser um privilégio e volta a ser o padrão.</div>
+      </div>
+      <div class="transformacao-item reveal reveal-delay-1">
+        <div class="transf-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <div class="transf-title">O humor estabiliza</div>
+        <div class="transf-text">A oscilação emocional sem causa clara começa a fazer sentido — e a diminuir.</div>
+      </div>
+      <div class="transformacao-item reveal reveal-delay-2">
+        <div class="transf-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="transf-title">A disposição melhora</div>
+        <div class="transf-text">A energia volta — e com ela, a vontade de fazer o que você gosta.</div>
+      </div>
+      <div class="transformacao-item reveal">
+        <div class="transf-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="transf-title">A libido reaparece</div>
+        <div class="transf-text">Sintoma comum, raramente investigado. Com o eixo hormonal equilibrado, isso muda.</div>
+      </div>
+      <div class="transformacao-item reveal reveal-delay-1">
+        <div class="transf-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="transf-title">A memória fica mais clara</div>
+        <div class="transf-text">A névoa mental diminui. A concentração volta. O raciocínio fica mais ágil.</div>
+      </div>
+      <div class="transformacao-item reveal reveal-delay-2">
+        <div class="transf-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/></svg>
+        </div>
+        <div class="transf-title">A relação com o espelho muda</div>
+        <div class="transf-text">Não é sobre padrão estético. É sobre se reconhecer de volta na própria imagem.</div>
+      </div>
+    </div>
+
+    <!-- BIG IDEA -->
+    <div class="big-idea reveal">
+      <p class="big-idea-text">
+        Não é sobre voltar a ser quem você era.<br>
+        <em>É sobre voltar a se reconhecer.</em>
+      </p>
+      <p class="big-idea-source">— Dra. Mariana Fantinatti</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DEPOIMENTOS ═══════════════════════════════════════════ -->
+<section class="depoimentos" aria-labelledby="dep-title">
+  <div class="container">
+    <div class="eyebrow reveal">O que dizem as pacientes</div>
+    <h2 class="section-title reveal reveal-delay-1" id="dep-title">
+      Vozes <em>reais.</em>
+    </h2>
+
+    <div class="depoimentos-grid">
+      <article class="dep-card reveal">
+        <span class="dep-quote-mark" aria-hidden="true">"</span>
+        <p class="dep-text">
+          "Como é bom te ouvir — seu saber, seu modo de cuidar e tratar cada paciente é único."
+        </p>
+        <div class="dep-divider" aria-hidden="true"></div>
+        <div class="dep-name">@werneckjg</div>
+        <div class="dep-role">Paciente</div>
+      </article>
+
+      <article class="dep-card reveal reveal-delay-1">
+        <span class="dep-quote-mark" aria-hidden="true">"</span>
+        <p class="dep-text">
+          "A melhor endocrino da vida."
+        </p>
+        <div class="dep-divider" aria-hidden="true"></div>
+        <div class="dep-name">@fisiopelvicakarla</div>
+        <div class="dep-role">Fisioterapeuta pélvica · Paciente</div>
+      </article>
+
+      <article class="dep-card reveal reveal-delay-2">
+        <span class="dep-quote-mark" aria-hidden="true">"</span>
+        <p class="dep-text">
+          "Suas orientações são maravilhosas!!!"
+        </p>
+        <div class="dep-divider" aria-hidden="true"></div>
+        <div class="dep-name">@julianamotta27</div>
+        <div class="dep-role">Paciente</div>
+      </article>
+
+      <!-- Aviso de placeholder para depoimentos completos -->
+      <div class="dep-aviso reveal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;color:var(--cinza-lt)" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p class="dep-aviso-text">
+          <strong>Espaço reservado:</strong> Substituir quando depoimentos completos (com contexto de sintoma → resultado) forem coletados. Incluir nome, contexto e resultado percebido para maior impacto de conversão.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOBRE ══════════════════════════════════════════════════ -->
+<section class="sobre" id="sobre" aria-labelledby="sobre-title">
+  <div class="container">
+    <div class="sobre-layout">
+      <!-- Imagem -->
+      <div class="sobre-img-wrap" aria-hidden="true">
+        <!--
+          INSTRUÇÃO PARA INCLUSÃO DA IMAGEM SOBRE:
+          Substitua o bloco .sobre-img-placeholder abaixo por:
+
+          <img id="sobre-img"
+               class="sobre-img"
+               src="data:image/jpeg;base64,SEU_BASE64_AQUI"
+               alt="Dra. Mariana Fantinatti no consultório"
+               loading="lazy"
+               decoding="async">
+        -->
+        <div class="sobre-img-placeholder">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0 1 12 0v1"/>
+          </svg>
+          <span>Foto editorial — Dra. Mariana</span>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div>
+        <div class="eyebrow reveal">Quem cuida de você</div>
+        <h2 class="sobre-nome reveal reveal-delay-1" id="sobre-title">Dra. Mariana Fantinatti</h2>
+        <p class="sobre-titulo reveal reveal-delay-1">Médica Endocrinologista</p>
+
+        <!--
+          INSTRUÇÃO: Substituir o bloco .sobre-body-placeholder
+          pelo texto em primeira pessoa fornecido pela Dra. Mariana.
+          Estrutura sugerida:
+          - Por que escolheu a endocrinologia
+          - O que guia sua prática clínica
+          - O que diferencia seu jeito de cuidar
+        -->
+        <div class="sobre-body-placeholder reveal reveal-delay-2">
+          Texto em primeira pessoa a ser fornecido pela Dra. Mariana Fantinatti.<br>
+          <em>Sugestão: por que escolheu a endocrinologia · o que guia a prática clínica · o que torna seu cuidado diferente.</em>
+        </div>
+
+        <ul class="cred-lista reveal reveal-delay-3" role="list">
+          <li class="cred-row">
+            <span class="cred-check" aria-hidden="true">✓</span>
+            <span>CRM/RJ: 107530-6</span>
+          </li>
+          <li class="cred-row">
+            <span class="cred-check" aria-hidden="true">✓</span>
+            <span>RQE: 50814 — Especialidade reconhecida pelo CFM</span>
+          </li>
+          <li class="cred-row">
+            <span class="cred-check" aria-hidden="true">✓</span>
+            <span>Médica Endocrinologista | Saúde hormonal e metabólica</span>
+          </li>
+          <li class="cred-row">
+            <span class="cred-check" aria-hidden="true">✓</span>
+            <span>Sevvi Clínica Integrada — Norte Fluminense, RJ</span>
+          </li>
+          <li class="cred-row">
+            <span class="cred-check" aria-hidden="true">✓</span>
+            <span>Participação em eventos e formações em endocrinologia</span>
+          </li>
+        </ul>
+
+        <blockquote class="sobre-quote reveal reveal-delay-4">
+          <p class="sobre-quote-text">
+            "Na endocrinologia, não tratamos apenas um exame.<br>
+            Tratamos a pessoa, o metabolismo e o contexto em que ela vive."
+          </p>
+          <cite class="sobre-quote-source">— Dra. Mariana Fantinatti</cite>
+        </blockquote>
+
+        <div class="sobre-strip reveal">
+          <div>
+            <span class="strip-num">+25k</span>
+            <span class="strip-label">Seguidores no Instagram</span>
+          </div>
+          <div>
+            <span class="strip-num">808+</span>
+            <span class="strip-label">Publicações educativas</span>
+          </div>
+          <div>
+            <span class="strip-num">✓</span>
+            <span class="strip-label">Conta verificada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMO FUNCIONA ═════════════════════════════════════════ -->
+<section class="processo" id="processo" aria-labelledby="processo-title">
+  <div class="container">
+    <div class="processo-layout">
+      <!-- Coluna esquerda: steps -->
+      <div>
+        <div class="eyebrow reveal">Como funciona</div>
+        <h2 class="section-title reveal reveal-delay-1" id="processo-title">
+          Três passos para <em>começar.</em>
+        </h2>
+        <p class="section-sub reveal reveal-delay-2">
+          O primeiro passo é simples — e não exige nenhum compromisso além de uma conversa.
+        </p>
+
+        <div class="steps">
+          <div class="step-row reveal">
+            <div class="step-n" aria-hidden="true">1</div>
+            <div>
+              <div class="step-title">Entre em contato pelo WhatsApp</div>
+              <div class="step-body">Você manda uma mensagem e nossa equipe responde para agendar sua consulta de avaliação.</div>
+            </div>
+          </div>
+          <div class="step-row reveal reveal-delay-1">
+            <div class="step-n" aria-hidden="true">2</div>
+            <div>
+              <div class="step-title">Consulta de avaliação</div>
+              <div class="step-body">Na primeira consulta, investigamos seu histórico, sintomas, exames e contexto de vida. Sem pressa. Sem protocolo pronto.</div>
+            </div>
+          </div>
+          <div class="step-row reveal reveal-delay-2">
+            <div class="step-n" aria-hidden="true">3</div>
+            <div>
+              <div class="step-title">Caminho personalizado</div>
+              <div class="step-body">Depois de entender o que está acontecendo, definimos juntos o melhor tratamento — ou os próximos passos para chegar lá.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card de localização -->
+        <div class="local-card reveal reveal-delay-3">
+          <div class="local-title">Onde nos encontrar</div>
+          <div class="local-nome">Sevvi Clínica Integrada</div>
+          <!--
+            INSTRUÇÃO: Substituir o bloco .local-placeholder
+            pelo endereço real da clínica quando confirmado.
+          -->
+          <div class="local-placeholder">Endereço completo a ser inserido — Norte Fluminense, RJ</div>
+        </div>
+      </div>
+
+      <!-- Coluna direita: CTA sticky -->
+      <div>
+        <div class="processo-cta-box reveal reveal-delay-1">
+          <div class="eyebrow eyebrow--light">Próximo passo</div>
+          <h3 class="processo-cta-title">O primeiro passo é uma conversa.</h3>
+          <p class="processo-cta-sub">
+            Você não precisa chegar com diagnóstico. Precisa chegar com seus sintomas, sua história e a disposição de investigar.<br><br>
+            O resto é o nosso trabalho.
+          </p>
+          <a href="https://wa.me/5522998505103?text=Olá%2C%20Dra.%20Mari!%20Gostaria%20de%20agendar%20uma%20consulta."
+             class="btn btn-white btn-lg"
+             target="_blank" rel="noopener"
+             style="width:100%">
+            <svg class="ico-wa" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="fill:var(--verde-deep)">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.117 1.533 5.845L.057 23.486a.5.5 0 0 0 .638.604l5.772-1.513A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.942 9.942 0 0 1-5.071-1.384l-.361-.214-3.742.981.999-3.648-.235-.374A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+            Agendar minha consulta
+          </a>
+          <p class="processo-cta-micro">Você será direcionado(a) ao WhatsApp para agendar diretamente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══════════════════════════════════════════════════ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="faq-layout">
+      <!-- Intro sticky -->
+      <div class="faq-intro-sticky">
+        <div class="eyebrow reveal">Perguntas frequentes</div>
+        <h2 class="section-title reveal reveal-delay-1" id="faq-title">
+          Ainda tem <em>dúvidas?</em>
+        </h2>
+        <p class="faq-sub-text reveal reveal-delay-2">
+          Respondemos as perguntas mais comuns de quem está pensando em agendar a primeira consulta.
+        </p>
+        <a href="https://wa.me/5522998505103?text=Olá%2C%20Dra.%20Mari!%20Tenho%20uma%20dúvida%20antes%20de%20agendar."
+           class="faq-cta-link reveal reveal-delay-3"
+           target="_blank" rel="noopener">
+          Falar diretamente com a equipe →
+        </a>
+      </div>
+
+      <!-- Accordion -->
+      <div class="accordion reveal reveal-delay-1" role="list">
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
+            Preciso trazer exames para a primeira consulta?
+            <span class="acc-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Sim, se você tiver exames recentes, traga — eles ajudam. Mas não é obrigatório. Avaliamos o que você tem disponível e solicitamos o que for necessário a partir da avaliação clínica.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
+            Vocês atendem por convênio?
+            <span class="acc-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <!--
+                INSTRUÇÃO: Substituir pela resposta real fornecida pela médica.
+                Ex: "Atendemos pelos convênios X, Y e Z" ou "Atendimento particular."
+              -->
+              <em style="color:var(--cinza-lt)">Resposta a ser confirmada com a Dra. Mariana. Entre em contato pelo WhatsApp para obter essa informação atualizada.</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
+            Tenho medo de tratamento hormonal. É normal?
+            <span class="acc-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Sim, e esse medo é legítimo. Por isso toda decisão começa com uma avaliação completa. <strong>Nenhum tratamento é iniciado sem que você compreenda exatamente o que está sendo feito e por quê.</strong> A consulta existe para esclarecer, não para pressionar.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
+            Como sei se o meu problema tem causa hormonal?
+            <span class="acc-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Só a avaliação clínica pode responder isso — e é exatamente o que faremos na consulta. <strong>Muitos sintomas que parecem "coisa do estresse" têm causas investigáveis e tratáveis.</strong> Não assuma que é normal antes de investigar.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
+            Já fiz exames e disseram que estava tudo normal. Faz sentido consultar mesmo assim?
+            <span class="acc-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Sim. Exames dentro dos valores de referência de laboratório não significam necessariamente que tudo está ótimo para <em>você</em>. A avaliação endocrinológica vai além dos exames — considera sintomas, histórico, contexto de vida e padrões que muitas vezes não aparecem em exames de rotina.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <button class="acc-btn" aria-expanded="false">
+            Quanto tempo dura a primeira consulta?
+            <span class="acc-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <!--
+                INSTRUÇÃO: Substituir pela resposta real da médica.
+              -->
+              <em style="color:var(--cinza-lt)">Informação a ser confirmada com a Dra. Mariana. Entre em contato para saber mais sobre o formato da consulta.</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ═════════════════════════════════════════════ -->
+<section class="cta-final" aria-labelledby="cta-final-title">
+  <div class="container">
+    <div class="cta-final-inner">
+      <div class="eyebrow eyebrow--light reveal" style="justify-content:center">Próximo passo</div>
+      <h2 class="cta-final-title reveal reveal-delay-1" id="cta-final-title">
+        O primeiro passo<br>
+        é uma <em>conversa.</em>
+      </h2>
+      <p class="cta-final-body reveal reveal-delay-2">
+        Você não precisa chegar com diagnóstico. Precisa chegar com seus sintomas, sua história e a disposição de investigar.<br><br>
+        O resto é o nosso trabalho.
+      </p>
+      <div class="cta-group reveal reveal-delay-3">
+        <a href="https://wa.me/5522998505103?text=Olá%2C%20Dra.%20Mari!%20Gostaria%20de%20agendar%20uma%20consulta."
+           class="btn btn-white btn-lg"
+           target="_blank" rel="noopener">
+          <svg class="ico-wa" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="fill:var(--verde-deep)">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.117 1.533 5.845L.057 23.486a.5.5 0 0 0 .638.604l5.772-1.513A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.942 9.942 0 0 1-5.071-1.384l-.361-.214-3.742.981.999-3.648-.235-.374A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
+          Agendar minha consulta
+        </a>
+        <a href="https://www.instagram.com/dra.marifantinatti/"
+           class="btn-ghost-white"
+           target="_blank" rel="noopener">
+          Ver no Instagram
+        </a>
+      </div>
+      <p class="cta-micro reveal reveal-delay-4">
+        Atendimento presencial na Sevvi Clínica Integrada · Norte Fluminense, RJ
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        Dra. Mari Fantinatti
+        <small>Endocrinologista</small>
+      </div>
+      <div class="footer-crm">
+        CRM/RJ: 107530-6 · RQE: 50814<br>
+        <span style="font-size:.68rem;opacity:.7">Sevvi Clínica Integrada · Norte Fluminense, RJ</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/dra.marifantinatti/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5522998505103?text=Olá%2C%20Dra.%20Mari!" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.threads.com/@dra.marifantinatti" target="_blank" rel="noopener">Threads</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ WHATSAPP FLUTUANTE ════════════════════════════════════ -->
+<div class="wa-float" id="waFloat" aria-label="Agendar consulta via WhatsApp">
+  <a href="https://wa.me/5522998505103?text=Olá%2C%20Dra.%20Mari!%20Gostaria%20de%20agendar%20uma%20consulta."
+     target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.117 1.533 5.845L.057 23.486a.5.5 0 0 0 .638.604l5.772-1.513A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.942 9.942 0 0 1-5.071-1.384l-.361-.214-3.742.981.999-3.648-.235-.374A9.945 9.945 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+    <span>Agendar consulta</span>
+  </a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── Header scroll ─────────────────────────────────── */
+  var header = document.getElementById('header');
+  function onScroll() {
+    // No mobile o header é estático — não aplicar solid
+    if (window.innerWidth > 820) {
+      if (window.scrollY > 60) {
+        header.classList.add('solid');
+      } else {
+        header.classList.remove('solid');
+      }
+    }
+    // WhatsApp float — aparece após 12% do scroll
+    var pct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    waFloat.classList.toggle('visible', pct > 0.12);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ── WhatsApp float ─────────────────────────────────── */
+  var waFloat = document.getElementById('waFloat');
+
+  /* ── Mobile nav ─────────────────────────────────────── */
+  var navToggle = document.getElementById('navToggle');
+  var mobileNav = document.getElementById('mobileNav');
+  var isOpen = false;
+
+  function openMobileNav() {
+    isOpen = true;
+    navToggle.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    mobileNav.classList.add('open');
+    mobileNav.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileNav() {
+    isOpen = false;
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    mobileNav.classList.remove('open');
+    mobileNav.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  navToggle.addEventListener('click', function () {
+    if (isOpen) { closeMobileNav(); } else { openMobileNav(); }
+  });
+  // ESC fecha o menu
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen) { closeMobileNav(); }
+  });
+  // Expõe closeMobileNav globalmente para os links onclick
+  window.closeMobileNav = closeMobileNav;
+
+  /* ── Scroll reveal ──────────────────────────────────── */
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    // Fallback: mostra tudo imediatamente
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ── Accordion FAQ ──────────────────────────────────── */
+  var accItems = document.querySelectorAll('.acc-item');
+  accItems.forEach(function (item) {
+    var btn = item.querySelector('.acc-btn');
+    var body = item.querySelector('.acc-body');
+    btn.addEventListener('click', function () {
+      var isExpanded = item.classList.contains('open');
+      // Fecha todos
+      accItems.forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.acc-btn').setAttribute('aria-expanded', 'false');
+        i.querySelector('.acc-body').style.maxHeight = '0';
+      });
+      // Abre o clicado (se não estava aberto)
+      if (!isExpanded) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ── Dispara onScroll inicial ───────────────────────── */
+  onScroll();
+
+})();
+</script>
+
+</body>
+</html>
